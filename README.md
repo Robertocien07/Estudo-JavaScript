@@ -1,26 +1,32 @@
-# 🚀 Estudos de Lógica e JavaScript
+# 📝 Gerenciador de Tarefas
 
-Este repositório foi criado para registrar minha evolução nos estudos de desenvolvimento de software, com foco em me preparar para o mercado de trabalho (especialmente para vagas de Desenvolvedor Mobile com React Native).
+Um aplicativo web simples e moderno para organizar suas tarefas diárias. Este projeto está sendo construído do zero como parte dos meus estudos práticos de desenvolvimento Front-end e versionamento de código.
 
-## 📚 O que já foi estudado:
-- **Estrutura Web:** Criação de páginas HTML e conexão com arquivos externos usando a tag `<script>`.
-- **Fundamentos de JavaScript:** Variáveis (`let` e `const`), tipos de dados, operadores e lógica de programação.
-- **Condicionais e Laços:** Estruturas de decisão (`if/else`, operador ternário) e repetição (`for`, `map`, `filter`).
-- **Orientação a Objetos (OO):** Criação de Classes, instanciação de Objetos, uso de `constructor`, Herança (`extends` e `super`) e métodos.
-- **Ambiente de Desenvolvimento:** Configuração do VS Code, uso do Live Server e versionamento com Git/GitHub.
+## 🚀 Tecnologias Utilizadas
 
-## 🛠️ Tecnologias Utilizadas:
-- HTML5
-- JavaScript (ES6+)
-- Git e GitHub (versionamento e publicação)
+Até o momento, o projeto utiliza:
+- **HTML5**: Estruturação semântica da página.
+- **CSS3**: Estilização moderna, layout responsivo com **Flexbox** e design focado na experiência do usuário.
+- **Git e GitHub**: Versionamento com Conventional Commits (ex: `feat:`, `style:`).
 
-## 🎯 Próximos Passos (Roadmap):
-- [x] Lógica de Programação e Fundamentos de JS
-- [x] Orientação a Objetos (Classes, Objetos, Herança)
-- [ ] Fundamentos de TypeScript
-- [ ] Fundamentos de React Native
-- [ ] Consumo de APIs REST
-- [ ] Criação de projetos mobile práticos
+## ⚙️ Funcionalidades (Em desenvolvimento)
+
+- [x] Estrutura base em HTML.
+- [x] Design moderno e responsivo (mobile-first) com CSS.
+- [ ] Adicionar novas tarefas via formulário (JavaScript).
+- [ ] Marcar tarefas como concluídas.
+- [ ] Deletar tarefas da lista.
+- [ ] Salvar as tarefas no navegador (LocalStorage) para não perder os dados ao atualizar a página.
+
+## 🎨 Layout
+
+O layout foi projetado para ser limpo e centralizado, utilizando técnicas de *Box Model* e *Flexbox* para garantir que o aplicativo funcione bem tanto no computador quanto em telas menores.
+
+## 💻 Como rodar o projeto
+
+1. Clone o repositório.
+2. Navegue até a pasta `gerenciador-tarefas`.
+3. Abra o arquivo `index.html` no navegador ou utilize a extensão **Live Server** no VS Code.
 
 ---
-*Estudo contínuo em busca da primeira oportunidade como Dev Mobile.*
+*Desenvolvido por [Roberto Donato](https://github.com/Robertocieno07)*
