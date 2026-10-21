@@ -4,8 +4,7 @@ Um aplicativo web simples e moderno para organizar suas tarefas diárias. Este p
 
 ## 🖼️ Preview do Projeto
 
-![Preview do Gerenciador de Tarefas](.gerenciador-tarefas/preview.png)
-
+![Preview do Gerenciador de Tarefas](./gerenciador-tarefas/preview.png)
 ## 🚀 Tecnologias Utilizadas
 
 Até o momento, o projeto utiliza:
