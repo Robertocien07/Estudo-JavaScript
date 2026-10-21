@@ -19,7 +19,7 @@
    ========================================= */
 body {
   background-color: #f0f2f5; /* Define a cor de fundo do site (cinza bem claro) */
-  
+  flex-direction: column; /* Faz os elementos dentro do body ficarem empilhados verticalmente */
   /* Ativa o Flexbox, que é o melhor jeito de alinhar elementos na tela */
   display: flex; 
   justify-content: center; /* Centraliza o conteúdo no eixo horizontal (na largura) */
@@ -124,4 +124,24 @@ header p {
      o botão de deletar (que faremos no JS) para a DIREITA */
   justify-content: space-between; 
   align-items: center; /* Garante que o texto e o botão fiquem alinhados na mesma altura */
+}
+
+/* =========================================
+   7. RODAPÉ (Créditos)
+   ========================================= */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

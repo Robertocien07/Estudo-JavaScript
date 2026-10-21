@@ -7,7 +7,7 @@ Um aplicativo web simples e moderno para organizar suas tarefas diárias. Este p
 Até o momento, o projeto utiliza:
 - **HTML5**: Estruturação semântica da página.
 - **CSS3**: Estilização moderna, layout responsivo com **Flexbox** e design focado na experiência do usuário.
-- **JavaScript (ES6+)**: Manipulação do DOM, captura de eventos (`addEventListener`) e criação dinâmica de elementos HTML.
+- **JavaScript (ES6+)**: Manipulação do DOM, captura de eventos (`addEventListener`), criação dinâmica de elementos (`createElement`) e remoção de elementos (`removeChild`).
 - **Git e GitHub**: Versionamento com Conventional Commits (ex: `feat:`, `style:`, `docs:`).
 
 ## ⚙️ Funcionalidades
@@ -15,17 +15,14 @@ Até o momento, o projeto utiliza:
 - [x] Estrutura base em HTML.
 - [x] Design moderno e responsivo (mobile-first) com CSS.
 - [x] Adicionar novas tarefas via formulário (JavaScript).
+- [x] Deletar tarefas da lista (JavaScript).
 - [ ] Marcar tarefas como concluídas.
-- [ ] Deletar tarefas da lista.
 - [ ] Salvar as tarefas no navegador (LocalStorage) para não perder os dados ao atualizar a página.
 
 ## 🧠 Como a Lógica Funciona (Bastidores)
 
-1. O usuário digita a tarefa no input e clica em "Adicionar".
-2. O JavaScript intercepta o envio do formulário (evitando que a página recarregue) usando `event.preventDefault()`.
-3. O texto é extraído, limpo (removendo espaços extras) e validado.
-4. Um novo elemento `<li>` é criado dinamicamente com `document.createElement()`.
-5. Esse novo elemento é inserido na lista `<ul>` visível na tela usando `appendChild()`.
+1. **Adicionar Tarefa:** O usuário digita a tarefa e clica em "Adicionar". O JavaScript intercepta o envio do formulário (evitando que a página recarregue), extrai o texto e cria um novo elemento `<li>` dinamicamente.
+2. **Deletar Tarefa:** Junto com o texto da tarefa, o JavaScript cria um botão "X". Quando esse botão é clicado, ele aciona a função `removeChild()`, que remove o item da lista da tela instantaneamente.
 
 ## 💻 Como rodar o projeto
 
