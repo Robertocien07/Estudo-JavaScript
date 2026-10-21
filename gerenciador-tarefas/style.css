@@ -1,0 +1,127 @@
+/* =========================================
+   1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+/* O asterisco (*) seleciona TODOS os elementos da página */
+* {
+  margin: 0; /* Remove a margem (espaço externo) padrão dos navegadores */
+  padding: 0; /* Remove o preenchimento (espaço interno) padrão */
+  
+  /* O box-sizing: border-box garante que a largura e altura incluam bordas e paddings.
+     Sem isso, uma caixa de 100px com padding de 10px viraria 120px. */
+  box-sizing: border-box; 
+  
+  /* Define a fonte. Colocamos várias opções: se o usuário não tiver a primeira, ele tenta a próxima. */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================================
+   2. O CORPO DA PÁGINA (Fundo e Centralização)
+   ========================================= */
+body {
+  background-color: #f0f2f5; /* Define a cor de fundo do site (cinza bem claro) */
+  
+  /* Ativa o Flexbox, que é o melhor jeito de alinhar elementos na tela */
+  display: flex; 
+  justify-content: center; /* Centraliza o conteúdo no eixo horizontal (na largura) */
+  align-items: center; /* Centraliza o conteúdo no eixo vertical (na altura) */
+  
+  /* Garante que o body ocupe 100% da altura da tela (vh = viewport height) */
+  min-height: 100vh; 
+}
+
+/* =========================================
+   3. O CARTÃO PRINCIPAL (.container)
+   ========================================= */
+/* O ponto (.) seleciona uma classe do HTML (class="container") */
+.container {
+  background-color: #ffffff; /* Fundo branco para o cartão */
+  width: 100%; /* Ocupa a largura toda em telas pequenas (celular) */
+  max-width: 400px; /* Trava o tamanho em 400px em telas grandes (computador) */
+  padding: 2rem; /* Espaço interno (2rem equivale a cerca de 32px) */
+  border-radius: 12px; /* Arredonda os cantos do cartão */
+  
+  /* Cria a sombra: 0 (deslocamento X), 4px (Y), 15px (desfoque), cor preta com 10% de opacidade */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* =========================================
+   4. CABEÇALHO (Título e Subtítulo)
+   ========================================= */
+header {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 1.5rem; /* Cria um espaço abaixo do cabeçalho */
+}
+
+header h1 {
+  color: #333; /* Cor do texto: um cinza bem escuro, quase preto */
+  font-size: 1.8rem; /* Tamanho da fonte grande */
+  margin-bottom: 0.5rem; /* Espaço entre o h1 e o parágrafo */
+}
+
+header p {
+  color: #666; /* Cor cinza média para o subtítulo */
+  font-size: 0.9rem; /* Fonte um pouco menor que o padrão */
+}
+
+/* =========================================
+   5. FORMULÁRIO (Input e Botão lado a lado)
+   ========================================= */
+/* A hashtag (#) seleciona um ID (id="form-tarefa") */
+#form-tarefa {
+  display: flex; /* Coloca o input e o botão na mesma linha */
+  gap: 10px; /* Cria um espaço exato de 10px entre o input e o botão */
+  margin-bottom: 1.5rem; /* Separa o formulário da lista de tarefas */
+}
+
+#input-tarefa {
+  flex: 1; /* O pulo do gato: faz o input crescer e ocupar todo o espaço sobrando */
+  padding: 0.8rem; /* Espaço interno para o texto não encostar na borda */
+  border: 1px solid #ccc; /* Borda fina e cinza clara */
+  border-radius: 6px; /* Arredonda as bordas do input */
+  outline: none; /* Remove aquela borda preta padrão que o navegador coloca ao clicar */
+  font-size: 1rem; /* Tamanho do texto que será digitado */
+}
+
+/* :focus é um estado. Ele aplica o estilo apenas quando você clica no input para digitar */
+#input-tarefa:focus {
+  border-color: #007bff; /* A borda fica azul quando o campo está ativo */
+}
+
+#btn-adicionar {
+  padding: 0.8rem 1.2rem; /* Primeiro valor: cima/baixo. Segundo: laterais */
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white; /* Cor do texto branca */
+  border: none; /* Remove a borda padrão de botões */
+  border-radius: 6px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Muda a setinha do mouse para a mãozinha de clique */
+  font-weight: bold; /* Deixa o texto em negrito */
+  transition: background-color 0.2s; /* Faz a troca de cor ser suave (demora 0.2s) */
+}
+
+/* :hover é um estado. Aplica o estilo quando o mouse passa por cima do elemento */
+#btn-adicionar:hover {
+  background-color: #0056b3; /* Escurece o azul quando passa o mouse, dando feedback visual */
+}
+
+/* =========================================
+   6. LISTA DE TAREFAS (Onde o JS vai trabalhar)
+   ========================================= */
+#lista-tarefas {
+  list-style: none; /* Remove as bolinhas pretas padrão das listas (<ul>) */
+}
+
+/* Seleciona cada item (<li>) que for criado dentro da lista */
+#lista-tarefas li {
+  background-color: #f8f9fa; /* Fundo cinza bem clarinho para cada tarefa */
+  padding: 1rem; /* Espaço interno em cada tarefa */
+  margin-bottom: 0.5rem; /* Espaço entre uma tarefa e outra */
+  border-radius: 6px; /* Arredonda os cantos */
+  border: 1px solid #e9ecef; /* Bordinha sutil */
+  
+  display: flex; /* Ativa o flexbox dentro de cada item da lista */
+  
+  /* O space-between joga o texto da tarefa para a ESQUERDA e 
+     o botão de deletar (que faremos no JS) para a DIREITA */
+  justify-content: space-between; 
+  align-items: center; /* Garante que o texto e o botão fiquem alinhados na mesma altura */
+}
